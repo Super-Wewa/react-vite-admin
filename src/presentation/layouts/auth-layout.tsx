@@ -10,6 +10,7 @@ import { CiMenuFries } from "react-icons/ci";
 import { useAuthStore } from "../../store/auth-store";
 import { IoLogOut } from "react-icons/io5";
 import { TbBuildingEstate } from "react-icons/tb";
+import { MdElectricBike } from "react-icons/md";
 
 export default function AuthLayout({ children, title }: { children?: ReactNode, title?: string }) {
   const { user, clear } = useAuthStore()
@@ -58,6 +59,11 @@ export default function AuthLayout({ children, title }: { children?: ReactNode, 
               label="Utilisateurs"
               link={routes.users}
               icon={<FaUser />}
+            />
+            <SidebarLink
+              label="Courses"
+              link={routes.trips}
+              icon={<MdElectricBike />}
             />
             <SidebarLink
               label="Provinces"

@@ -45,3 +45,61 @@ export type User = {
   bike?: Bike
   province?: Province
 }
+
+export type WalletBalance = {
+  currency: Currency
+}
+
+export type Transaction = {
+  id: string
+  reference: string
+  amount: number
+  cash: boolean
+  wallet: WalletBalance
+}
+
+export type Currency = {
+  id: string
+  name: string
+  value: string
+  active: boolean
+}
+
+export type TripLocations = {
+  from: Location
+  to: Location
+  distance: number
+}
+
+export type Location = {
+  latitude: number
+  longitude: number
+  heading: number
+  name: string
+}
+
+export type TripTimestamps = {
+  createdAt: string
+  driverAcceptedAt?: string
+  begin?: string
+  end?: string
+  canceledAt?: string
+}
+
+export type TripCashPayment = {
+  id: string
+  amount: number
+  currency: Currency
+}
+
+export type Trip = {
+  id: string
+  locations: TripLocations
+  timeStamps: TripTimestamps
+  user: User
+  driver?: User
+  canceled: boolean
+  ended: boolean
+  transaction?: Transaction
+  cash?: TripCashPayment
+}
