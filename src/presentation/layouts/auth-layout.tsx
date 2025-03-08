@@ -68,7 +68,7 @@ export default function AuthLayout({ children, title }: { children?: ReactNode, 
         </div>
 
         <div className="flex-1 flex-col ml-0 relative transition-all overflow-x-hidden">
-          <div className="w-full sticky top-0 left-0 bg-white px-5 py-3 shadow-xl flex items-center justify-between">
+          <div className="w-full sticky z-50 top-0 left-0 bg-white px-5 py-3 shadow-xl flex items-center justify-between">
             <div className="w-fit flex items-center gap-3">
               <ActionIcon onClick={() => setIsOpen(true)}>
                 <CiMenuFries />
@@ -81,7 +81,7 @@ export default function AuthLayout({ children, title }: { children?: ReactNode, 
               <IoLogOut />
             </ActionIcon>
           </div>
-          <main className="p-4">{children}</main>
+          <main className="p-5">{children}</main>
         </div>
       </div>
     </>

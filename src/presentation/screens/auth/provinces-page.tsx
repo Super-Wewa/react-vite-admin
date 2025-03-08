@@ -21,7 +21,7 @@ export default function ProvincesPage() {
 
   return (
     <AuthLayout title="Provinces">
-      <div className="w-full flex flex-col gap-5 p-5 items-center justify-center">
+      <div className="w-full flex flex-col gap-5 items-center justify-center">
         {
           loading ? (
             <Loader />
