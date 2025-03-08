@@ -3,6 +3,7 @@ import DashboardPage from "./presentation/screens/auth/dashboard"
 import LoginScreen from "./presentation/screens/guest/login-screen"
 import { useAuthStore } from "./store/auth-store"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { Toaster } from 'react-hot-toast'
 
 function App() {
   const { user, token } = useAuthStore()
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route index element={<LoginScreen />} path={routes.index} />
         </Routes>
+        <Toaster />
       </BrowserRouter>
     )
   }
@@ -22,6 +24,7 @@ function App() {
       <Routes>
         <Route index element={<DashboardPage />} path={routes.index} />
       </Routes>
+      <Toaster />
     </BrowserRouter>
   )
 }

@@ -4,3 +4,8 @@ export type Admin = {
   email: string
   active: boolean
 }
+
+export type LoginDto = {
+  email: string
+  password: string
+}
