@@ -9,3 +9,9 @@ export type LoginDto = {
   email: string
   password: string
 }
+
+export type Province = {
+  id: string
+  name: string
+  active: boolean
+}

@@ -1,3 +1,5 @@
 export const routes = {
-  index: '/'
+  index: '/',
+  users: '/users',
+  provinces: '/provinces'
 }

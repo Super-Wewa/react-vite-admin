@@ -28,11 +28,13 @@ export default {
 				 * primary colors
 				 */
 				primary: {
-					lighter: "#8333F5",
+					lighter: colors.gray[200],
 					DEFAULT: colors.gray[800],
 					dark: colors.gray[950],
 					foreground: colors.white,
 				},
+
+        'c-primary': "#8333F5",
 
 				/*
 				 * secondary colors
