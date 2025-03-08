@@ -29,11 +29,11 @@ export default function AuthLayout({ children, title }: { children?: ReactNode, 
       <div className="flex h-screen">
         {
           isOpen && (
-            <div className="w-screen h-screen z-30 fixed top-0 left-0 bg-black bg-opacity-50"></div>
+            <div className="w-screen h-screen z-40 fixed top-0 left-0 bg-black bg-opacity-50"></div>
           )
         }
         <div
-          className={`bg-gray-800 z-40 flex flex-col gap-10 text-white w-64 fixed h-full transform transition-transform ${isOpen ? "translate-x-0" : "-translate-x-64"}`}
+          className={`bg-gray-800 z-50 flex flex-col gap-10 text-white w-64 fixed h-full transform transition-transform ${isOpen ? "translate-x-0" : "-translate-x-64"}`}
           ref={sidebarRef}
         >
           <ActionIcon
@@ -74,7 +74,7 @@ export default function AuthLayout({ children, title }: { children?: ReactNode, 
         </div>
 
         <div className="flex-1 flex-col ml-0 relative transition-all overflow-x-hidden">
-          <div className="w-full sticky z-50 top-0 left-0 bg-white px-5 py-3 shadow-xl flex items-center justify-between">
+          <div className="w-full sticky z-30 top-0 left-0 bg-white px-5 py-3 shadow-xl flex items-center justify-between">
             <div className="w-fit flex items-center gap-3">
               <ActionIcon onClick={() => setIsOpen(true)}>
                 <CiMenuFries />
