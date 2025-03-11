@@ -102,4 +102,6 @@ export type Trip = {
   ended: boolean
   transaction?: Transaction
   cash?: TripCashPayment
+  passengerRate?: number
+  driverRate?: number
 }
