@@ -66,6 +66,11 @@ export default function AuthLayout({ children, title }: { children?: ReactNode, 
               icon={<MdElectricBike />}
             />
             <SidebarLink
+              label="Bonuses"
+              link={routes.bonuses}
+              icon={<TbCreditCardPay />}
+            />
+            <SidebarLink
               label="Frais"
               link={routes.fees}
               icon={<TbCreditCardPay />}

@@ -3,5 +3,6 @@ export const routes = {
   users: '/users',
   provinces: '/provinces',
   trips: '/trips',
-  fees: '/fees'
+  fees: '/fees',
+  bonuses: '/bonuses'
 }

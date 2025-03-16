@@ -8,6 +8,7 @@ import UsersPage from "./presentation/screens/auth/users-page"
 import ProvincesPage from "./presentation/screens/auth/provinces-page"
 import TripsPage from "./presentation/screens/auth/trips-page"
 import FeesPage from "./presentation/screens/auth/fees-page"
+import BonusesPage from "./presentation/screens/auth/bonuses"
 
 function App() {
   const { user, token } = useAuthStore()
@@ -31,6 +32,7 @@ function App() {
         <Route element={<ProvincesPage />} path={routes.provinces} />
         <Route element={<TripsPage />} path={routes.trips} />
         <Route element={<FeesPage />} path={routes.fees} />
+        <Route element={<BonusesPage />} path={routes.bonuses} />
       </Routes>
       <Toaster />
     </BrowserRouter>

@@ -129,3 +129,24 @@ export interface Fee {
   updatedAt: string;
   currency?: Currency;
 }
+
+export interface Reward {
+  uid: string;
+  id: string;
+  currencyId: string;
+  amount: number;
+  breakpointId: string;
+  createdAt: string;
+  updatedAt: string;
+  currency: Currency;
+}
+
+export interface Breakpoint {
+  uid: string;
+  id: string;
+  active: boolean;
+  tripsCount: number;
+  createdAt: string;
+  updatedAt: string;
+  rewards: Reward[];
+}
