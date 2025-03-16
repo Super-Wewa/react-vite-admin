@@ -9,7 +9,7 @@ import { ActionIcon } from "rizzui/action-icon";
 import { CiMenuFries } from "react-icons/ci";
 import { useAuthStore } from "../../store/auth-store";
 import { IoLogOut } from "react-icons/io5";
-import { TbBuildingEstate } from "react-icons/tb";
+import { TbBuildingEstate, TbCreditCardPay } from "react-icons/tb";
 import { MdElectricBike } from "react-icons/md";
 
 export default function AuthLayout({ children, title }: { children?: ReactNode, title?: string }) {
@@ -64,6 +64,11 @@ export default function AuthLayout({ children, title }: { children?: ReactNode, 
               label="Courses"
               link={routes.trips}
               icon={<MdElectricBike />}
+            />
+            <SidebarLink
+              label="Frais"
+              link={routes.fees}
+              icon={<TbCreditCardPay />}
             />
             <SidebarLink
               label="Provinces"

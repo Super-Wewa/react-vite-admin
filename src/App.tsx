@@ -7,6 +7,7 @@ import { Toaster } from 'react-hot-toast'
 import UsersPage from "./presentation/screens/auth/users-page"
 import ProvincesPage from "./presentation/screens/auth/provinces-page"
 import TripsPage from "./presentation/screens/auth/trips-page"
+import FeesPage from "./presentation/screens/auth/fees-page"
 
 function App() {
   const { user, token } = useAuthStore()
@@ -29,6 +30,7 @@ function App() {
         <Route element={<UsersPage />} path={routes.users} />
         <Route element={<ProvincesPage />} path={routes.provinces} />
         <Route element={<TripsPage />} path={routes.trips} />
+        <Route element={<FeesPage />} path={routes.fees} />
       </Routes>
       <Toaster />
     </BrowserRouter>

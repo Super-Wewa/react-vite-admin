@@ -105,3 +105,27 @@ export type Trip = {
   passengerRate?: number
   driverRate?: number
 }
+
+export enum FeesRecurringType {
+  NEVER = 'NEVER',
+  DAILY = 'DAILY',
+  WEEKLY = 'WEEKLY',
+  MONTHLY = 'MONTHLY',
+  YEARLY = 'YEARLY'
+}
+
+export interface Fee {
+  id: string;
+  name: string;
+  description: string;
+  descriptionUrl?: string;
+  recurringType: FeesRecurringType;
+  amount: number;
+  currencyId: string;
+  daylyDays: number[];
+  active: boolean;
+  concernedUsers: UserType[];
+  createdAt: string;
+  updatedAt: string;
+  currency?: Currency;
+}
