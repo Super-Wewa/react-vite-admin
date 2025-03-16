@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import { Breakpoint } from "../../../lib/types";
 import { loadBreakpoints } from "../../../services/breakpoints";
 import AuthLayout from "../../layouts/auth-layout";
-import { Loader, Plus } from "lucide-react";
 import { Button } from "rizzui/button";
 import { BreakpointCard } from "../../components/atoms/bonus-card";
 import { BreakpointForm } from "../../components/forms/breakpoints-form";
+import { Plus } from "lucide-react";
+import { Loader } from "rizzui/loader";
 
 export default function BonusesPage() {
   const [breakpoints, setBreakpoints] = useState<Breakpoint[]>([])

@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 import AuthLayout from "../../layouts/auth-layout";
 import { Fee } from "../../../lib/types";
 import { Switch } from "rizzui/switch";
-import { Edit2, Loader } from "lucide-react";
+import { Edit2 } from "lucide-react";
 import { loadFees } from "../../../services/fees";
 import FeesForm from "../../components/forms/fees-form";
 import { Button } from "rizzui/button";
 import { ActionIcon } from "rizzui/action-icon";
 import axiosInstance from "../../../services/axios";
 import { notify } from "../../../utils/functions";
+import { Loader } from "rizzui/loader";
 
 export default function FeesPage() {
   const [fees, setFees] = useState<Fee[]>([]);

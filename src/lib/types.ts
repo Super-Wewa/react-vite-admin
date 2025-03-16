@@ -150,3 +150,15 @@ export interface Breakpoint {
   updatedAt: string;
   rewards: Reward[];
 }
+
+export type AppWallet = {
+  id: string
+  currency: Currency
+  balance: number
+}
+
+export type TripPrice = {
+  id: string
+  currency: Currency
+  price: number
+}
